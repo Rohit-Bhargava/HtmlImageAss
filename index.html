@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+body {
+  margin: 0px;
+  padding: 2px;
+  position:inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin-right: 0;
+  padding: 0;
+  width: 10%;
+  background-color: #ffffff;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border: 0px solid rgb(255, 255, 255);
+}
+
+li div {
+  display: block;
+  color: rgb(3, 3, 3);
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 2px;
+  
+  text-align: center;
+}
+
+li div.active {
+  background-color: #4779e7;
+  color: #ffffff;
+}
+
+li div:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.gallery {
+  display: block;
+  width: 10%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(229, 229, 235);    
+  background-color: rgb(255, 255, 255); 
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.form-control {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  outline: #ffffff solid 0px;
+  width: 700px;
+  height: 40px;
+  padding: 20px;  
+}
+#myCanvas{
+  text-align: center;
+  border: 2px solid #ffffff;
+  margin-left: 400px;
+  padding: 60px; 
+  width: 150px;
+  height: 150px;
+  color: black;
+  background-color: #ffffff;
+  
+}
+
+
+</style>
+</head>
+<body>
+<div class="container-flued">
+    <div class="gallery">
+      <img src="image\Capture1.PNG" alt="Cinque Terre" width="100%" height="100px">
+    </div> 
+  <ul>
+    <li>
+      <div>
+        <span class="material-icons">
+        perm_identity
+        </span><br>
+      <label for="icon">Students</label>
+      </div>
+    </li>
+    <li>
+      <div class="active">
+        <span class="material-icons">
+          library_books
+        </span><br>
+      <label for="icon">Lesson Plan</label>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="material-icons">
+          settings
+        </span><br>
+      <label for="icon">Settings</label>
+      </div>
+    </li>
+  </ul>
+
+
+  <div style="margin-left:10%;height: 1000px; background-color: darkgray;">
+  
+    <div>
+      <i class="material-icons" style="font-size: 24px; margin-left: 0px; padding-top: 16px;">arrow_left</i><b>Video</b>
+    </div>
+    <br>
+    <br>
+    <div style="text-align: center;">
+      <input type="url" class="form-control" id="exampleFormControlInput1" placeholder="Insert URL here">
+    </div>    
+    <br>
+    <h3><p style="text-align: center;">or</p></h3>
+    <br>
+    <div style="text-align: center;">
+      <div id="myCanvas">Upload</div>
+    </div>    
+  </div>
+</div>
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
